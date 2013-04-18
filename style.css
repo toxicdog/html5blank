@@ -157,6 +157,14 @@ img {
 .social {
 	float:right;
 }
+.social-button {
+	display:inline-block;
+	vertical-align:top;
+	*display:inline;
+	zoom:1;
+	width:100px;
+	height:20px;
+}
 .features {
 	overflow:hidden;
 	color:#333;

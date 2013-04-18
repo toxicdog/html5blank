@@ -124,9 +124,13 @@
 					<div id="fb-root"></div>
 				</div>
 				<div class="social">
-					<div class="addthis_toolbox addthis_default_style">
-						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-						<a class="addthis_button_tweet"></a>
+					<div class="social-button">
+						<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+					</div>
+					<div class="social-button">
+						<div id="fb-root"></div>
+						<div class="fb-like" data-send="false" data-layout="button_count" 
+						data-width="1" data-show-faces="false" data-action="like"></div>
 					</div>
 				</div>
 			</div>
@@ -151,9 +155,24 @@
 				}
 			}
 		}
+		// Sharing: Facebook, Twitter
+		(function(doc,s) {
+		    var js, fjs = doc.getElementsByTagName(s)[0],
+		        frag = doc.createDocumentFragment(),
+		        add = function (url, id) {
+		            if (doc.getElementById(id)) {
+		                return;
+		            }
+		            js = doc.createElement(s);
+		            js.src = url;
+		            id && (js.id = id);
+		            frag.appendChild(js);
+		        };
+		    add('http://connect.facebook.net/en_US/all.js#xfbml=1','facebook-jssdk');
+		    add('http://platform.twitter.com/widgets.js');
+		    fjs.parentNode.insertBefore(frag, fjs);
+		})(document,'script');
 		</script>
-		
-		<script src="//s7.addthis.com/js/250/addthis_widget.js"></script>
 		<script>
 			var _gaq=[['_setAccount','UA-20440416-11'],['_trackPageview']];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

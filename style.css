@@ -240,6 +240,7 @@ img {
 }
 #carbonads-container {
 	position:fixed;
+	z-index:9999;
 	bottom:50px;
 	right:0;
 }

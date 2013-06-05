@@ -238,7 +238,7 @@ img {
 	font-size:22px;
 	font-weight:700;
 }
-.carbonads-container {
+#carbonads-container {
 	position:fixed;
 	bottom:50px;
 	right:0;
